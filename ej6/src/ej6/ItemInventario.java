@@ -1,5 +1,7 @@
 package ej6;
 
-public class ItemInventario {
-
+public abstract class ItemInventario {
+	
+	public abstract int getID(); 
+	
 }
