@@ -9,6 +9,7 @@ public class Orquesta {
 	public static void main(String[] args) {
 		instrumentos.add(new Guitarra());
 		instrumentos.add(new Piano());
+		instrumentos.add(new Violin());
 		
 		for(int i=0; i<instrumentos.size(); i++) {
 			System.out.println(instrumentos.get(i).sonar());
