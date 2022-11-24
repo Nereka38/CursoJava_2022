@@ -6,6 +6,7 @@ public abstract class Figura {
 
 	// constructores
 	public Figura() {
+		super();
 		cantidadDeFiguras++;
 	}
 

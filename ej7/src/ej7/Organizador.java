@@ -11,7 +11,7 @@ public class Organizador {
 	
 	private static int[] output (int[] input) {
 		int auxiliar;
-		for (int i = 0; i < input.length-1; i++) {
+		for (int i = 0; i < input.length-1; i++)  {
 	        for (int j = 1; j < input.length; j++) {
 	            if (input[j-1] > input[j]) {
 	                auxiliar = input[j-1];
