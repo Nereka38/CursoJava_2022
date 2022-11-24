@@ -6,7 +6,7 @@ package figuras;
 import figuras.exceptions.FiguraException;
 
 /**
- * @author nefernan
+ * @author Nerea
  *
  */
 public class Cuadrado extends Figura {

@@ -1,7 +1,7 @@
 package ej7;
 
 /**
- * @author nefernan
+ * @author Nerea
  *
  *Ordena un array de manera ascendente
  *

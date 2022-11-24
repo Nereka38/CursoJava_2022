@@ -4,7 +4,7 @@
 package figuras;
 
 /**
- * @author nefernan
+ * @author Nerea
  *
  */
 public class Triangulo extends Figura {
