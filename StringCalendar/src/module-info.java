@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author nefernan
+ *
+ */
+module StringCalendar {
+}
