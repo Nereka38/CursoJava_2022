@@ -19,13 +19,14 @@ class PlanetTest {
 	
 	Planet mass;
 	Planet radius;
-	Planet name;
+	String name;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+		
 	}
 
 	/**
@@ -36,7 +37,10 @@ class PlanetTest {
 	}
 
 	@Test
-	void test() {
+	void testPlanet() {
+		String planet1 = new String ("MERCURY");
+		
+		assertEquals(planet1, Planet.MERCURY);
 		
 	}
 

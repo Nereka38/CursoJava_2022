@@ -35,6 +35,11 @@ public enum Planet {
     public double getRadius() {
         return radius;
     }
+    
+    public static String getbyName(String string) {
+		// TODO Auto-generated method stub
+		return string;
+	}
 
 
     public static void main(String[] args) {
@@ -43,6 +48,8 @@ public enum Planet {
         }
         
     }
+
+	
     
   
 }
