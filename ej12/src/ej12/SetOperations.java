@@ -10,7 +10,7 @@ import java.util.TreeSet;
  * @author Nerea
  *
  */
-public class SetOperations {
+public abstract class SetOperations {
 	
 	public static <T> Set<T> union(Set<T> setA, Set<T> setB) {
 	    Set<T> setUnion = new TreeSet<T>(setA);
@@ -27,20 +27,20 @@ public class SetOperations {
 		    return setInterseccion;
 	}
 	
-//	public static <T> Set<T> diferencia(Set<T> setA, Set<T> setB) {
-//		Set<T> setDiferencia = new TreeSet<T>(setA);
-//	    setDiferencia.removeAll(setB);
-//	    return setDiferencia;
-//	}
-//	
-//	public static <T> Set<T> difSimetrica(Set<T> setA, Set<T> setB) {
-//	    Set<T> setA1;
-//	    Set<T> setB1;
-//
-//	    setA1 = union(setA, setB);
-//	    setB1 = interseccion(setA, setB);
-//	    return diferencia(setA1, setB1);
-//	  }
+	public static <T> Set<T> diferencia(Set<T> setA, Set<T> setB) {
+		Set<T> setDiferencia = new TreeSet<T>(setA);
+	    setDiferencia.removeAll(setB);
+	    return setDiferencia;
+	}
+	
+	public static <T> Set<T> difSimetrica(Set<T> setA, Set<T> setB) {
+	    Set<T> setA1;
+	    Set<T> setB1;
+
+	    setA1 = union(setA, setB);
+	    setB1 = interseccion(setA, setB);
+	    return diferencia(setA1, setB1);
+	  }
 
 	
 	public static void main(String args[]) {
@@ -63,10 +63,9 @@ public class SetOperations {
 
 	    System.out.println("Union: " + union(set1, set2));
 	    System.out.println("Intersection: " + interseccion(set1, set2));
-//	    System.out.println("Difference : " + diferencia(set1, set2));
-//	    System.out.println("Symmetric Difference: " + difSimetrica(set1, set2));
+	    System.out.println("Difference : " + diferencia(set1, set2));
+	    System.out.println("Symmetric Difference: " + difSimetrica(set1, set2));
 
 	  }
-	
 
 }
