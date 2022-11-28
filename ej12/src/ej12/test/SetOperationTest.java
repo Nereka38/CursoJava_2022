@@ -101,8 +101,7 @@ class SetOperationTest {
 	void testDiferenciaInt() {
 		Set<Integer> intSetDiferencia = new HashSet<Integer>();
 		
-		
 		assertEquals(intSetDiferencia, SetOperations.diferencia(setIntA, setIntB));
 	}
-
+	
 }

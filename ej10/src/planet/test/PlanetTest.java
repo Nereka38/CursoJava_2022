@@ -9,11 +9,17 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.capgemini.training.java.ej2.Planet;
+
 /**
  * @author Nerea
  *
  */
 class PlanetTest {
+	
+	Planet mass;
+	Planet radius;
+	Planet name;
 
 	/**
 	 * @throws java.lang.Exception
@@ -31,7 +37,7 @@ class PlanetTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		
 	}
 
 }
