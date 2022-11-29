@@ -3,13 +3,16 @@
  */
 package ej13;
 
+import java.util.Objects;
+
+
 /**
  * @author Nerea
  *
  */
-public class Person {
+public class Person implements Comparable<Person>{
 	private int file;
-	private int age;
+	private Integer age;
 	private String name;
 	
 	
@@ -17,8 +20,7 @@ public class Person {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
+	
 	public Person(int file, int age, String name) {
 		super();
 		this.file = file;
@@ -98,8 +100,13 @@ public class Person {
 	public String toString() {
 		return "Person [file=" + file + ", age=" + age + ", name=" + name + "]";
 	}
-	
-	
+
+
+	@Override
+	public int compareTo(Person o) {
+		return age.compareTo(o.getAge());
+	}
+
 
 
 

@@ -1,6 +1,6 @@
 package figuras;
 
-public abstract class Figura {
+public abstract class Figura implements Comparable<Figura>{
 	private String nombre;
 	private static int cantidadDeFiguras;
 
@@ -60,5 +60,13 @@ public abstract class Figura {
 		sb.append(nombre);
 		return sb.toString();
 	}
+
+	@Override
+	public int compareTo(Figura o) {
+//		return nombre.compareTo(o.getNombre());
+		return (-1)*nombre.compareTo(o.getNombre());
+	}
+	
+	
 
 }

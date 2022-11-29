@@ -7,11 +7,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
-import com.capgemini.training.java.ej2.MiPila;
+
 
 /**
- * @author Nerea
+ * @author 
  *
  */
 public abstract class PersonsUtil {
@@ -27,7 +29,13 @@ public abstract class PersonsUtil {
 
 	}
 	
-	
-	
+	public static Set<Integer> getPersonsOrder(List<Person> list) {
+		Set<Integer> personsSet = new TreeSet<Integer>();
+		for (Person p : list) {
+			personsSet.add(p.getAge());
+			     
+		}
 
+		return personsSet;
+	}
 }
