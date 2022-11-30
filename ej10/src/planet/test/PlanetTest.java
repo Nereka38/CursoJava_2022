@@ -11,22 +11,23 @@ import org.junit.jupiter.api.Test;
 
 import com.capgemini.training.java.ej2.Planet;
 
+import employee.Employee;
+
 /**
  * @author Nerea
  *
  */
-class PlanetTest {
-	
-	Planet mass;
-	Planet radius;
-	String name;
-
+class PlanetTest  {
+	String planet1Name;
+	double planet1Mass, planet1Radius;
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-		
+		planet1Name = "MERCURY";
+		planet1Mass = 1.024E26;
+		planet1Radius = 2.4397e6;
 	}
 
 	/**
@@ -34,13 +35,26 @@ class PlanetTest {
 	 */
 	@AfterEach
 	void tearDown() throws Exception {
+		planet1Name = null;
+		planet1Mass = 0;
+		planet1Radius = 0;
+	}
+	
+	@Test
+	void testMercuryName() {
+		assertEquals(planet1Name, Planet.MERCURY.toString());
+		
 	}
 
 	@Test
-	void testPlanet() {
-		String planet1 = new String ("MERCURY");
+	void testMercuryMass() {
+		assertEquals(planet1Mass, Planet.MERCURY.getMass());
 		
-		assertEquals(planet1, Planet.MERCURY);
+	}
+	
+	@Test
+	void testMercuryRadius() {
+		assertEquals(planet1Radius, Planet.MERCURY.getRadius());
 		
 	}
 

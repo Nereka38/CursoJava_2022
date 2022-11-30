@@ -6,13 +6,13 @@ public class Jugar {
 
 	public static void main(String[] args) {
 		System.out.println("Vamos a Jugar! ");
-		System.out.println("Ingrese un numero: 1 es piedra, 2 papel y 3 tijera ");
+		System.out.println("Ingrese un numero: 1 es piedra, 2 papel, 3 tijera, 4 lagartija y 5 spock ");
 		
 		Scanner sc = new Scanner(System.in);
 		int nro = sc.nextInt()
 ;
 		
-		int nroOrdenador = (int) (Math.random()*3) + 1;
+		int nroOrdenador = (int) (Math.random()*5) + 1;
 		
 		PiedraPapelTijeraFactory pptUsuario = PiedraPapelTijeraFactory.getInstance(nro);
 		PiedraPapelTijeraFactory pptOrdenador = PiedraPapelTijeraFactory.getInstance(nroOrdenador);

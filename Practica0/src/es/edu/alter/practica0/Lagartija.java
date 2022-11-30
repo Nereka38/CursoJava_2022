@@ -24,20 +24,14 @@ public class Lagartija extends PiedraPapelTijeraFactory {
 		int pierde = -1;
 		int numeroRecibido = pPiedraPapelTijera.getNumero();
 		
-		//lagarto gana a Spook y papel y pierde piedra y tijera
+
 		switch (numeroRecibido) {
 		case TIJERA:
-			result = pierde;
-			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
-			break;
 		case PIEDRA:
 			result = pierde;
 			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
 			break;
 		case PAPEL:
-			result = gana;
-			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
-			break;
 		case SPOCK:
 			result = gana;
 			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			

@@ -23,21 +23,14 @@ public class Spock extends PiedraPapelTijeraFactory {
 		int pierde = -1;
 		int numeroRecibido = pPiedraPapelTijera.getNumero();
 		
-		//spock gana a piedra y tijera y pierde lagartija y papel
 		
 		switch (numeroRecibido) {
 		case PAPEL:
-			result = pierde;
-			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
-			break;
 		case LAGARTIJA:
 			result = pierde;
 			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
 			break;
 		case PIEDRA:
-			result = gana;
-			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
-			break;
 		case TIJERA:
 			result = gana;
 			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
