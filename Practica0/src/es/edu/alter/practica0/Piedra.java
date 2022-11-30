@@ -27,7 +27,15 @@ public class Piedra extends PiedraPapelTijeraFactory {
 			result = pierde;
 			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
 			break;
+		case LAGARTIJA:
+			result = pierde;
+			descripcionResultado = nombre + " Pierde contra " + pPiedraPapelTijera.getNombre();			
+			break;
 		case TIJERA:
+			result = gana;
+			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
+			break;
+		case SPOCK:
 			result = gana;
 			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
 			break;

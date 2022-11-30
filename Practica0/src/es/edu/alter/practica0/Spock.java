@@ -1,6 +1,10 @@
 package es.edu.alter.practica0;
 
 public class Spock extends PiedraPapelTijeraFactory {
+	
+	public Spock() {
+		this("spock", SPOCK);
+	}
 
 	public Spock(String nombre, int pNumero) {
 		super(nombre, pNumero);
@@ -9,8 +13,7 @@ public class Spock extends PiedraPapelTijeraFactory {
 
 	@Override
 	public boolean isMe(int pNumero) {
-		// TODO Auto-generated method stub
-		return false;
+		return pNumero == SPOCK;
 	}
 
 	@Override

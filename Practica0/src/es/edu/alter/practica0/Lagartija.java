@@ -1,7 +1,12 @@
 package es.edu.alter.practica0;
 
 public class Lagartija extends PiedraPapelTijeraFactory {
-
+	
+	public Lagartija() {
+		this("lagartija", LAGARTIJA);
+	}
+	
+	
 	public Lagartija(String nombre, int pNumero) {
 		super(nombre, pNumero);
 		// TODO Auto-generated constructor stub
@@ -9,8 +14,7 @@ public class Lagartija extends PiedraPapelTijeraFactory {
 
 	@Override
 	public boolean isMe(int pNumero) {
-		// TODO Auto-generated method stub
-		return false;
+		return pNumero == LAGARTIJA;
 	}
 
 	@Override

@@ -29,10 +29,10 @@ public abstract class PersonsUtil {
 
 	}
 	
-	public static Set<Integer> getPersonsOrder(List<Person> list) {
-		Set<Integer> personsSet = new TreeSet<Integer>();
+	public static Set<Person> getPersonsOrder(List<Person> list) {
+		Set<Person> personsSet = new TreeSet<Person>();
 		for (Person p : list) {
-			personsSet.add(p.getAge());
+			personsSet.add(p);
 			     
 		}
 

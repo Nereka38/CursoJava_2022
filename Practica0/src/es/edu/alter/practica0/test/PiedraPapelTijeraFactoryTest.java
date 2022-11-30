@@ -10,6 +10,8 @@ import es.edu.alter.practica0.Papel;
 import es.edu.alter.practica0.Piedra;
 import es.edu.alter.practica0.PiedraPapelTijeraFactory;
 import es.edu.alter.practica0.Tijera;
+import es.edu.alter.practica0.Lagartija;
+import es.edu.alter.practica0.Spock;
 
 class PiedraPapelTijeraFactoryTest {
 
@@ -50,6 +52,16 @@ PiedraPapelTijeraFactory piedra, papel, tijera, lagartija, spock;
 	}
 	
 	@Test
+	void testGetInstanceLagartija() {
+		assertTrue(PiedraPapelTijeraFactory.getInstance(PiedraPapelTijeraFactory.LAGARTIJA) instanceof Lagartija);
+	}
+	
+	@Test
+	void testGetInstanceSpock() {
+		assertTrue(PiedraPapelTijeraFactory.getInstance(PiedraPapelTijeraFactory.SPOCK) instanceof Spock);
+	}
+	
+	@Test
 	void testGetInstancePiedra_false() {
 		assertFalse(PiedraPapelTijeraFactory.getInstance(PiedraPapelTijeraFactory.PIEDRA) instanceof Papel);
 	}
@@ -86,6 +98,7 @@ PiedraPapelTijeraFactory piedra, papel, tijera, lagartija, spock;
 	@Test
 	void testPapelLeGanaPiedra() {
 		assertEquals(1, papel.comparar(piedra));
+		assertEquals(papel.getDescripcionResultado(), "papel Gana contra piedra");
 	}
 	
 	@Test

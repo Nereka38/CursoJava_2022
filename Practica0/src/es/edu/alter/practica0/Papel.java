@@ -37,7 +37,7 @@ public class Papel extends PiedraPapelTijeraFactory {
 			result = gana;
 			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
 			break;
-		case PAPEL:
+		case LAGARTIJA:
 			result = pierde;
 			descripcionResultado = nombre + " Gana contra " + pPiedraPapelTijera.getNombre();			
 			break;

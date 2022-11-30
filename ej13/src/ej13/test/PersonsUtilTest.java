@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -85,13 +86,11 @@ class PersonsUtilTest {
 	@Test
 	void testgetPersonsOrdere() {
 		 
-		Set<Integer> expected = new TreeSet<Integer>();
-		 expected.add(person1.getAge());
-		 expected.add(person2.getAge());
-		 expected.add(person3.getAge());
-		 System.out.println(expected);
-		 System.out.println(PersonsUtil.getPersonsOrder(listTest));
-		 assertEquals(expected, PersonsUtil.getPersonsOrder(listTest));
+		Set<Person> recibidas = PersonsUtil.getPersonsOrder(listTest);
+		Iterator<Person> it = recibidas.iterator();
+		assertEquals(person3, it.next());
+		assertEquals(person1, it.next());
+		assertEquals(person2, it.next());
 	  
 	}
 
