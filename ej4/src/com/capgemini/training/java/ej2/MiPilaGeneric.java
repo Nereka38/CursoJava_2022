@@ -6,7 +6,6 @@ import java.util.Iterator;
 public class MiPilaGeneric {
 	private ArrayList<String> list;
 	 
-	//Constructores
 	public MiPilaGeneric() {
 		list = new ArrayList<String>();
 	}
@@ -15,10 +14,6 @@ public class MiPilaGeneric {
 		list = lista;
 	}
 
-	//Metodos del ejercicio
-	/**
-	 * Invierte el orden de los elementos
-	 */
 	public void reverse() {
 		ArrayList<String> reversedList = new ArrayList<String>();
 		for (int i=list.size()-1; i>=0;i--) {
@@ -27,35 +22,23 @@ public class MiPilaGeneric {
 		list=reversedList;
 	}
 	
-	/**
-	 * 
-	 * @return Ultimo elemento de la lista
-	 */
 	public String peek() {
 		return list.get(list.size()-1);
 	}
 	
-	/**
-	 * Inserta un elemento a la lista
-	 * @param string elemento a añadir
-	 */
+
 	public void push(String string) {
 		list.add(string);
 	}
 	
-	/**
-	 * Elimina el último elemento de la lista
-	 * @return elemento eliminado
-	 */
+
 	public String pop() {
 		String exit = list.get(list.size()-1);
 		list.remove(list.size()-1);
 		return exit;
 	}
 	
-	/**
-	 * @return ArrayList<String> Elementos de la pila
-	 */
+
 	public ArrayList<String> getList(){
 		return list;
 	}
