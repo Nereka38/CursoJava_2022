@@ -82,17 +82,17 @@ public class CalendarPrint {
         
         Calendar actualDay = Calendar.getInstance();
         int year = actualDay.get(Calendar.YEAR);
-        int month = actualDay.get(Calendar.MONTH) +1;
+        int month1 = actualDay.get(Calendar.MONTH) +1;
         int day = actualDay.get(Calendar.DAY_OF_MONTH);
         int hour = actualDay.get(Calendar.HOUR_OF_DAY);
         int minute = actualDay.get(Calendar.MINUTE);
         int second = actualDay.get(Calendar.SECOND);
 
-        System.out.println("Fecha Actual: "+ day + "/" + (month) + "/" + year);
+        System.out.println("Fecha Actual: "+ day + "/" + (month1) + "/" + year);
         System.out.printf("Hora Actual: %02d:%02d:%02d %n", hour, minute, second);
         System.out.println("-------------Fecha desglosada----------------");
         System.out.println("El año es: "+ year);
-        System.out.println("El mes es: "+ month);
+        System.out.println("El mes es: "+ month1);
         System.out.println("El día es: "+ day);
         System.out.printf("La hora es: %02d %n", hour);
         System.out.printf("El minuto es: %02d %n", minute);

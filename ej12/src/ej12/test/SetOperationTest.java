@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ej12.SetOperations;
-import util.Pair;
 
 /**
  * @author Nerea

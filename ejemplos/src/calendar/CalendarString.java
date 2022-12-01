@@ -8,8 +8,6 @@ import java.util.Calendar;
 import java.util.Scanner;
 import java.util.TimeZone;
 
-import ej11.YearMonth;
-
 /**
  * @author Nerea
  *
