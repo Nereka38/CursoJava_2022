@@ -1,4 +1,4 @@
-package com.capgemini.training.java.ej2;
+package com.capgemini.training.java.ej10;
 
 public class PlanetMain {
 

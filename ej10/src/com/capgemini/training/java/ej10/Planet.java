@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.capgemini.training.java.ej2;
+package com.capgemini.training.java.ej10;
 
 import java.util.Scanner;
 
