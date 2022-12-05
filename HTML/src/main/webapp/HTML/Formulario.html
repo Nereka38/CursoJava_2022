@@ -3,45 +3,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Formulario</title>
+<link rel="stylesheet" type="text/css" href="/Users/nefernan/eclipse-workspace/CursoJava_2022/HTML/src/main/webapp/css/formulario.css" media="screen" />
 </head>
 <body>
-<header>
-<h1>Rellena tu CV</h1>
-</header>
-<main>
-<form action="/form-page" method="post">
- <ul>
-  <li>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="name" name="usuario_nombre">
-  </li>
-  <li>
-    <label for="apellidos">Apellidos:</label>
-    <input type="text" id="apellidos" name="usuario_apellido">
-  </li>
-  <li>
-    <label for="contraseña">Contraseña:</label>
-    <input type="text" id="contraseña" name="usuario_contraseña">
-  </li>
-  <li>
-    <label for="dni">DNI:</label>
-    <input type="text" id="dni" name="usuario_dni">
-  </li>
-  <li>
-    <label for="dni">Sexo:</label>
-    <input type="radio" id="sexo_1" name="mujer" value="mujer">
-    <label for="sexo_1">Mujer</label>
-    <input type="radio" id="sexo_2" name="taste_banana" value="hombre">
-    <label for="sexo_1">Hombre</label>
-  </li>
-  <li>
-  <label for="myfile">Incluir mi imagen:</label>
-<input type="file" id="myfile" name="myfile">
-  </li>
- </ul>
- <p> <button type="submit">Guardar Cambios</button> </p>
- <p> <button type="reset">Borrar Datos Introducidos</button> </p>
-</form>
-</main>
+	<header>
+		<h1>Rellena tu CV</h1>
+	</header>
+	<main>
+		<form action="/form-page" method="post">
+		<fieldset>
+		<legend>Datos personales</legend>
+			<ul>
+				<li><label for="nombre">Nombre:</label><br> <input
+					type="text" id="name" name="usuario_nombre" maxlength="30"></li>
+				<li><label for="apellidos">Apellidos:</label><br> <input
+					type="text" id="apellidos" name="usuario_apellido" maxlength="80"></li>
+				<li><label for="contraseña">Contraseña:</label><br> <input
+					type="text" id="contraseña" name="usuario_contraseña"
+					maxlength="10"></li>
+				<li><label for="dni">DNI:</label><br> <input type="text"
+					id="dni" name="usuario_dni" pattern="[0-9]{8}[A-Za-z]{1}"
+					maxlength="9"></li>
+				<li><label for="dni">Sexo:</label><br> <input type="radio"
+					id="sexo_1" name="mujer" value="mujer"> <label for="sexo_1">Mujer</label>
+					<input type="radio" id="sexo_2" name="hombre" value="hombre">
+					<label for="sexo_1">Hombre</label></li>
+				<li><label for="imagen">Incluir mi imagen:</label> <input
+					type="file" id="mi-img" name="my-img"></li>
+				<li><input type="checkbox" id="cbox1" value="checkbox"
+					required>Suscribirme al boletin novedades<br></li>
+			</ul>
+			<div class="buttons">
+			<button type="submit">Guardar Cambios</button>
+
+			<button type="reset">Borrar Datos Introducidos</button>
+			</div>
+			</fieldset>
+		</form>
+	</main>
 </body>
+<style>
+
+</style>
 </html>
