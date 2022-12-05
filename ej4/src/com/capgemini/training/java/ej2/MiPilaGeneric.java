@@ -3,43 +3,43 @@ package com.capgemini.training.java.ej2;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class MiPilaGeneric {
-	private ArrayList<String> list;
+public class MiPilaGeneric<T> {
+	private ArrayList<T> list;
 	 
 	public MiPilaGeneric() {
-		list = new ArrayList<String>();
+		list = new ArrayList<T>();
 	}
 	
-	public MiPilaGeneric (ArrayList<String> lista) {
+	public MiPilaGeneric (ArrayList<T> lista) {
 		list = lista;
 	}
 
 	public void reverse() {
-		ArrayList<String> reversedList = new ArrayList<String>();
+		ArrayList<T> reversedList = new ArrayList<T>();
 		for (int i=list.size()-1; i>=0;i--) {
 			reversedList.add(list.get(i));
 		}
 		list=reversedList;
 	}
 	
-	public String peek() {
+	public T peek() {
 		return list.get(list.size()-1);
 	}
 	
 
-	public void push(String string) {
+	public void push(T string) {
 		list.add(string);
 	}
 	
 
-	public String pop() {
-		String exit = list.get(list.size()-1);
+	public T pop() {
+		T exit = list.get(list.size()-1);
 		list.remove(list.size()-1);
 		return exit;
 	}
 	
 
-	public ArrayList<String> getList(){
+	public ArrayList<T> getList(){
 		return list;
 	}
 	
@@ -58,7 +58,7 @@ public class MiPilaGeneric {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		Iterator<String> it = list.iterator();
+		Iterator<T> it = list.iterator();
 		while (it.hasNext()) {
 			sb.append(it.next());
 			sb.append("\t");
