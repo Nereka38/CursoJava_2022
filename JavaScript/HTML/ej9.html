@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario Avanzado</title>
+<link rel="stylesheet" type="text/css" href="/Users/nefernan/eclipse-workspace/CursoJava_2022/HTML/src/main/webapp/css/formulario.css" media="screen" />
+</head>
+<body>
+	<header>
+		<h1>Rellena tu CV</h1>
+	</header>
+	<main>
+	<form action="form" id="form" method="post">
+	<fieldset>
+		<legend>Datos personales</legend>
+			<ul>
+				<li><label for="cars">Provincia:</label><br> <select
+					id="provincias" name="listaprovincias" form="form">
+						<option value="selecciona">-Selecciona-</option>
+						<option value="asturias">Asturias</option>
+						<option value="galicia">Galicia</option>
+						<option value="madrid">Madrid</option>
+						<option value="valencia">Valencia</option>
+				</select></li>
+				<li><label for="nombre">Fecha de Nacimiento:</label><br> <input
+					type="text" id="dia" name="dia" maxlength="2" size="1"> de
+					<select id="provincias" name="listames" form="form">
+						<option value="selecciona">-Selecciona-</option>
+						<option value="enero">Enero</option>
+						<option value="febrero">Febrero</option>
+						<option value="marzo">Marzo</option>
+						<option value="abril">Abril</option>
+						<option value="mayo">Mayo</option>
+						<option value="junio">Junio</option>
+						<option value="julio">Julio</option>
+						<option value="agosto">Agosto</option>
+						<option value="septiembre">Septiembre</option>
+						<option value="octubre">Octubre</option>
+						<option value="noviembre">Noviembre</option>
+						<option value="diciembre">Diciembre</option>
+				</select> de <input type="text" id="a�o" name="a�o" maxlength="4" size="1"></li>
+				<li>
+				<label for="temas">Temas de Interes:</label><br>
+				<select id="temaslist" name="temas" size="4">
+				    <option value="adm">Administracion de bases de datos</option>
+				    <option value="analisis">Analisis y programacion</option>
+				    <option value="arquitectura">Arquitectura</option>
+				    <option value="calidad">Calidad</option>
+				    <option value="erp">ERP, CRM, Business Intelligence</option>
+  </select>
+				</li>
+			</ul>
+			</fieldset>
+			<h2>Informaci�n sobre el producto</h2>
+			
+			<fieldset>
+			<legend>Datos Basicos</legend>
+			<ul>
+				<li><label for="nombre">Nombre:</label><br> <input
+					type="text" id="name" name="usuario_nombre" size="30"></li>
+				<li><label for="description">Descripcion:</label><br> <textarea name="description" rows="10" cols="30">
+					</textarea></li>
+				<li><label for="imagen">Foto:</label> <input
+					type="file" id="mi-img" name="my-img"></li>
+				<li><input type="checkbox" id="cbox2" value="checkbox"
+					required>A�adir contador de <a href="www.google.com">visitas</a><br></li>	
+			</ul>
+			</fieldset><br>
+			<fieldset>
+			<legend>Datos Economicos</legend>
+			<ul>
+				<li><label for="precios">Precio</label> <input
+					type="text" id="precio" name="precio" maxlength="4" size="1">$
+					<label for="impuestos">Impuestos</label> <select id="impuestos" name="listaimpuestos" form="form">
+                        <option value="impuesto">-</option>
+						<option value="impuesto4">4%</option>
+						<option value="impuesto7">7%</option>
+						<option value="impuesto16">16%</option>
+						<option value="impuesto25">25%</option>
+				</select></li>
+				<li><label for="dni">Promocion:</label><br> <input type="radio"
+					id="ninguno" name="ninguno" value="ninguno"> <label for="sexo_1">Ninguno</label><br>
+					<input type="radio" id="transporte" name="transporte" value="transporte">
+					<label for="transporte-grat">Transporte gratuito</label><br>
+					<input type="radio" id="descuento" name="descuento" value="descuento">
+					<label id ="descuento" for="descuento">Descuento 5%</label><br></li>
+			</ul>
+			</fieldset>
+            <input type="submit" value="Validar">
+		</form>
+	</main>
+</body>
+<script src="../JS/ej9.js"></script>
+</html>
