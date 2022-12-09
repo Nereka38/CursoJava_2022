@@ -14,7 +14,7 @@
 	<fieldset>
 		<legend>Datos personales</legend>
 			<ul>
-				<li><label for="cars">Provincia:</label><br> <select
+				<li><label for="provincia">Provincia:</label><br> <select
 					id="provincias" name="listaprovincias" form="form">
 						<option value="selecciona">-Selecciona-</option>
 						<option value="asturias">Asturias</option>
@@ -24,7 +24,7 @@
 				</select></li>
 				<li><label for="nombre">Fecha de Nacimiento:</label><br> <input
 					type="text" id="dia" name="dia" maxlength="2" size="1"> de
-					<select id="provincias" name="listames" form="form">
+					<select id="mes" name="mes" >
 						<option value="selecciona">-Selecciona-</option>
 						<option value="enero">Enero</option>
 						<option value="febrero">Febrero</option>
@@ -38,7 +38,7 @@
 						<option value="octubre">Octubre</option>
 						<option value="noviembre">Noviembre</option>
 						<option value="diciembre">Diciembre</option>
-				</select> de <input type="text" id="a�o" name="a�o" maxlength="4" size="1"></li>
+				</select> de <input type="text" id="año" name="año" maxlength="4" size="1"></li>
 				<li>
 				<label for="temas">Temas de Interes:</label><br>
 				<select id="temaslist" name="temas" size="4">
@@ -82,8 +82,8 @@
 					id="ninguno" name="ninguno" value="ninguno"> <label for="sexo_1">Ninguno</label><br>
 					<input type="radio" id="transporte" name="transporte" value="transporte">
 					<label for="transporte-grat">Transporte gratuito</label><br>
-					<input type="radio" id="descuento" name="descuento" value="descuento">
-					<label id ="descuento" for="descuento">Descuento 5%</label><br></li>
+					<input type="radio" id="descuento" name="descuento5" value="descuento5">
+					<label id ="descuento5" for="descuento">Descuento 5%</label><br></li>
 			</ul>
 			</fieldset>
             <input type="submit" value="Validar">
