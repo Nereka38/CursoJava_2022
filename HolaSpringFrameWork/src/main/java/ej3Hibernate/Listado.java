@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class Listado {
 	@RequestMapping ("/listado")
-	public String goListado(Model model ) {
+	public String goListado(Model model) {
 		List<String> alumnos = new ArrayList<String>();
 		alumnos.add("Juan");
 		alumnos.add("Pedro");

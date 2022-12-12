@@ -1,7 +1,7 @@
 <%@page import ="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +10,9 @@
 </head>
 <body>
 	<h1>PROFESOR ${profesor}</h1>
+	<h2>Alumnos</h2>
 	<ul>
-		<c:forEach item="${alumnos}" var="alumno">
+		<c:forEach items="${alumnos}" var="alumno">
 			<li><c:out value="${alumno}" /></li>
 		</c:forEach>
 	</ul>

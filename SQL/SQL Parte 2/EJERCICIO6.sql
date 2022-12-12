@@ -1,11 +1,12 @@
 use capgemini_arg;
 
 desc employees;
-SELECT COUNT(DEPARTMENT_ID) AS Employees FROM Employees;
 
-select DEPARTMENT_ID, EMPLOYEE_ID FROM EMPLOYEES
+select DEPARTMENT_ID, COUNT(EMPLOYEE_ID) as total FROM EMPLOYEES
 where DEPARTMENT_ID > 40
-ORDER BY EMPLOYEE_ID DESC;
+GROUP BY department_id
+ORDER BY department_id ASC;
+
 
 select count(department_id) 
 from employees 

@@ -1,7 +1,10 @@
 use capgemini_arg;
 
+select distinct department_id
+FROM employees
+order by department_id asc;	
+
 desc employees;
-select DEPARTMENT_ID from employees;
-select MIN(DEPARTMENT_ID) FROM employees
-GROUP BY DEPARTMENT_ID
-ORDER BY Department_id DESC;
+select distinct department_id
+FROM employees
+order by department_id desc;
