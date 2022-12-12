@@ -1,0 +1,1 @@
+select fnc_factorial(3);
