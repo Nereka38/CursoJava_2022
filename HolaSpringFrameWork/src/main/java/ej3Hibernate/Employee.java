@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 
 @Entity
 @Controller
-@Table(name="ej3Hibernate")
+@Table(name="employee")
 public class Employee {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,8 +45,5 @@ public class Employee {
 		public String toString() {
 			return "Employee [id=" + id + ", name=" + name +"]";
 		}
-		
-		
-		
-		
+			
 	}

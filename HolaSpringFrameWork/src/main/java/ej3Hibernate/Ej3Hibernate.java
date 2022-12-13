@@ -8,15 +8,15 @@ public class Ej3Hibernate {
 
 	public static void main(String[] args) {
 			   
-		      EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "ejsHibernate" );
+		      EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("ejsHibernate");
 		      
 		      EntityManager entitymanager = emfactory.createEntityManager( );
 		      entitymanager.getTransaction( ).begin( );
 
 		      Employee employee = new Employee( ); 
-		      employee.setId( 1201 );
-		      employee.setName( "Pepe" );
-		      entitymanager.persist( employee );
+		      employee.setId(1201);
+		      employee.setName("Pepe");
+		      entitymanager.persist(employee);
 		      entitymanager.getTransaction( ).commit( );
 
 		      entitymanager.close( );

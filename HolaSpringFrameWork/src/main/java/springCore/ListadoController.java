@@ -1,4 +1,5 @@
-package ej3Hibernate;
+package springCore;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +7,7 @@ import java.util.List;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-public class Listado {
+public class ListadoController {
 	@RequestMapping ("/listado")
 	public String goListado(Model model) {
 		List<String> alumnos = new ArrayList<String>();
@@ -17,7 +18,7 @@ public class Listado {
 		model.addAttribute("titulo", "Listado de alumnos");
 		model.addAttribute("profesor", "Gabriel");
 		model.addAttribute("alumnos", alumnos);
-		return "Listado";
+		return "ListadoController";
 	}
 			
 }
