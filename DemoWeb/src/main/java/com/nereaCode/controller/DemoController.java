@@ -16,8 +16,22 @@ public class DemoController {
 	
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		Persona per = new Persona(1, "Gabriel Casas");
+		//añadir una persona
+		Persona per = new Persona(0, "Gabriel Casas");
 		repo.save(per);
+		
+		//añadir world a la tabla
+//		if(name==null || name.isEmpty())
+//			name="nereaCode";
+//		Persona per = new Persona(0, name);
+//		repo.save(per);
+		
+		//Para borrar una persona en la base de datos
+//		if(name.endsWith("World")) {
+//			repo.delete(new Persona(1, "Gabriel Casas"));
+//			name="nereaCode";
+//		}
+		
 		
 		model.addAttribute("name", name);
 		return "greeting";
