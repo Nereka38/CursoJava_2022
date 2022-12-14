@@ -3,31 +3,26 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.baeldung</groupId>
     <artifactId>parent-boot-2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>parent-boot-2</name>
     <packaging>pom</packaging>
     <description>Parent for all Spring Boot 2 modules</description>
 
-    <parent>
-        <groupId>com.baeldung</groupId>
-        <artifactId>parent-modules</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>${junit-jupiter.version}</version>
+                <version>5.9.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>3.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -38,11 +33,12 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
+            <version>5.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -53,7 +49,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot.version}</version>
+                    <version>3.0.0</version>
                     <configuration>
                         <mainClass>${start-class}</mainClass>
                         <!-- this is necessary as we're not using the Boot parent -->
@@ -71,12 +67,13 @@
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
+                        <version>3.0.0</version>
                         <dependencies>
                             <!-- The following enables the "thin jar" deployment option. -->
                             <dependency>
                                 <groupId>org.springframework.boot.experimental</groupId>
                                 <artifactId>spring-boot-thin-layout</artifactId>
-                                <version>${thin.version}</version>
+                                <version>1.0.22.RELEASE</version>
                             </dependency>
                         </dependencies>
                     </plugin>
@@ -86,7 +83,7 @@
     </profiles>
 
     <properties>
-        <rest-assured.version>3.3.0</rest-assured.version>
+        <rest-assured.version>5.3.0</rest-assured.version>
         <!-- plugins -->
         <thin.version>1.0.22.RELEASE</thin.version>
         <spring-boot.version>3.0.0</spring-boot.version>

@@ -11,11 +11,12 @@ import static org.junit.Assert.assertTrue;
  * must ensure the AspectJ compiler executes to weave in the Aspect's logic. Without the Aspect
  * weaved into the class under test, the trace logging will not be written to stdout.
  */
+
 public class MyTracedServiceUnitTest {
 
     @Rule
     public OutputCaptureRule outputCaptureRule = new OutputCaptureRule();
-
+   
     @Test
     public void whenPerformingSomeLogic_thenTraceAndInfoOutputIsWritten() {
         MyTracedService myTracedService = new MyTracedService();
