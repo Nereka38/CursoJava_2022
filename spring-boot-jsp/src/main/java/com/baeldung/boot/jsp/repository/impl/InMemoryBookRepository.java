@@ -10,11 +10,15 @@ public class InMemoryBookRepository implements BookRepository {
     private final Map<String, BookData> storedBooks;
 
     public InMemoryBookRepository(Map<String, BookData> storedBooks) {
-        this.storedBooks = new HashMap<>();
+        this.storedBooks = new HashMap<String, BookData>();
         this.storedBooks.putAll(storedBooks);
     }
 
-    @Override
+    public InMemoryBookRepository(Map<Object, Object> emptyMap) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
     public Collection<BookData> findAll() {
         if (storedBooks.isEmpty()) {
             return Collections.emptyList();

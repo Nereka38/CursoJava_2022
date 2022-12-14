@@ -53,7 +53,7 @@ public class InMemoryBookRepositoryUnitTest {
     }
 
     private static Map<String, BookData> initialBookData() {
-        Map<String, BookData> initData = new HashMap<>();
+        Map<String, BookData> initData = new HashMap<String, BookData>();
         initData.put("isbn1", new BookData("isbn1", "name1", "author1"));
         initData.put("isbn2", new BookData("isbn2", "name2", "author2"));
         initData.put("isbn3", new BookData("isbn3", "name3", "author3"));

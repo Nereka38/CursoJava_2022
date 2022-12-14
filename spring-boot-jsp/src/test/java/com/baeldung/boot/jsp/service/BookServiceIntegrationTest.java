@@ -59,7 +59,7 @@ public class BookServiceIntegrationTest {
     @Test
     @Order(3)
     public void givenBookAlreadyExists_whenAddBook_thenDuplicateBookException() {
-        Book bookToBeAdded = new Book("ISBN-ADD-TEST-4", "Updated Book 4", "Updated Book 4 Author");
+        final Book bookToBeAdded = new Book("ISBN-ADD-TEST-4", "Updated Book 4", "Updated Book 4 Author");
 
         assertThrows(DuplicateBookException.class, () -> bookService.addBook(bookToBeAdded));
     }

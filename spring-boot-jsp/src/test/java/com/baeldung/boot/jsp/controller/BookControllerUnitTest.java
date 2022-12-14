@@ -67,7 +67,7 @@ class BookControllerUnitTest {
     }
 
     private static Collection<Book> existingBooks() {
-        List<Book> books = new ArrayList<>();
+        List<Book> books = new ArrayList<Book>();
         books.add(new Book("isbn1", "name1", "author1"));
         books.add(new Book("isbn2", "name2", "author2"));
         books.add(new Book("isbn3", "name3", "author3"));

@@ -15,6 +15,7 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.function.Executable;
 import org.mockito.AdditionalAnswers;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -59,14 +60,18 @@ public class BookServiceImplUnitTest {
     public void givenBookAlreadyExist_whenAddBook_thenDuplicateBookException() {
         BookData existingBook = new BookData("isbn1", "name1", "author1");
         when(bookRepository.findById("isbn1")).thenReturn(Optional.of(existingBook));
-        BookService bookService = new BookServiceImpl(bookRepository);
-        Book bookToBeAdded = new Book("isbn1", "name1", "author1");
+        final BookService bookService = new BookServiceImpl(bookRepository);
+        final Book bookToBeAdded = new Book("isbn1", "name1", "author1");
 
-        assertThrows(DuplicateBookException.class, () -> bookService.addBook(bookToBeAdded));
+        assertThrows(DuplicateBookException.class, new Executable() {
+			public void execute() throws Throwable {
+				bookService.addBook(bookToBeAdded);
+			}
+		});
     }
 
     private static Collection<BookData> existingBooks() {
-        List<BookData> books = new ArrayList<>();
+        List<BookData> books = new ArrayList<BookData>();
         books.add(new BookData("isbn1", "name1", "author1"));
         books.add(new BookData("isbn2", "name2", "author2"));
         books.add(new BookData("isbn3", "name3", "author3"));
