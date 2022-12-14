@@ -28,7 +28,7 @@ class IUsuarioRepoTest {
 	
 	@Test
 	void testAgregarEncode() {
-		Usuario usu2 = new Usuario (0, encoder.encode("nfer"), "Nerea");
+		Usuario usu2 = new Usuario (0, encoder.encode("123456"), "NereaCode");
 		Usuario usuRetorno = usuRepo.save(usu2);
 		assertEquals(usu2.getClave(), usuRetorno.getClave());
 	}
