@@ -10,13 +10,9 @@ public class InMemoryBookRepository implements BookRepository {
     private final Map<String, BookData> storedBooks;
 
     public InMemoryBookRepository(Map<String, BookData> storedBooks) {
-        this.storedBooks = new HashMap<String, BookData>();
+        this.storedBooks = new HashMap<>();
         this.storedBooks.putAll(storedBooks);
     }
-
-    public InMemoryBookRepository(Map<Object, Object> emptyMap) {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
     public Collection<BookData> findAll() {
@@ -38,3 +34,4 @@ public class InMemoryBookRepository implements BookRepository {
         return book;
     }
 }
+
