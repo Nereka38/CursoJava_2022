@@ -79,7 +79,7 @@
 					<artifactId>spring-boot-maven-plugin</artifactId>
 					<version>3.0.0</version>
 					<configuration>
-						<mainClass>${start-class}</mainClass>
+						<mainClass>com.baeldung.SpringAopApplication</mainClass>
 						<!-- this is necessary as we're not using the Boot parent -->
 					</configuration>
 				</plugin>

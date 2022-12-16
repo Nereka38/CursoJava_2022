@@ -11,8 +11,8 @@ public class DuplicateBookException extends RuntimeException {
         this.book = book;
     }
 
-	public Book getBook() {
-		// TODO Auto-generated method stub
-		return book;
-	}
+//	public Book getBook() {
+//		// TODO Auto-generated method stub
+//		return book;
+//	}
 }

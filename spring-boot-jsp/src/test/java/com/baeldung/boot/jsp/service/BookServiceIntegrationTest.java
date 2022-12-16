@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -28,9 +29,10 @@ import com.baeldung.boot.jsp.repository.BookRepository;
 import com.baeldung.boot.jsp.repository.impl.InMemoryBookRepository;
 import com.baeldung.boot.jsp.repository.model.BookData;
 
-@ExtendWith(SpringExtension.class)
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class)
+@ExtendWith(SpringExtension.class)
 public class BookServiceIntegrationTest {
 
     @Autowired

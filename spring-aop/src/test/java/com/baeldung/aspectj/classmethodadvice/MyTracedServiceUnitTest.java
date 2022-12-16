@@ -6,6 +6,8 @@ import org.springframework.boot.test.system.OutputCaptureRule;
 
 import static org.junit.Assert.assertTrue;
 
+import org.aspectj.lang.annotation.Aspect;
+
 /*
  * When running this test class, the tests may fail unless you build the code with Maven first. You
  * must ensure the AspectJ compiler executes to weave in the Aspect's logic. Without the Aspect

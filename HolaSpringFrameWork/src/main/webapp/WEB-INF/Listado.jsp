@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Codigo Spring</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>Hola mundo</h1>
+
 </body>
 </html>

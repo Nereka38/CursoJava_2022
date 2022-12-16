@@ -5,7 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
 
 @Trace
-@Component
+@Component 
 public class MyTracedService {
     private static final Log LOG = LogFactory.getLog(MyTracedService.class);
 
